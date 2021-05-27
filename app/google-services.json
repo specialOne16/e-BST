@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "976957221945",
+    "project_id": "e-bst-65f11",
+    "storage_bucket": "e-bst-65f11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976957221945:android:775d58e5fc7ef3940d31e8",
+        "android_client_info": {
+          "package_name": "com.bangkit142.ebst"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "976957221945-meltahkv83nm7c4d1kid69junf1uppb9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAT7qZHGK-Z6iCixxA_BJk-4rH3TWjN2bc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "976957221945-meltahkv83nm7c4d1kid69junf1uppb9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

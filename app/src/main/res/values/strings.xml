@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">E-BST</string>
+    <string name="nik">NIK</string>
+    <string name="check">check</string>
+    <string name="nama">Nama</string>
+    <string name="submit">submit</string>
 </resources>
