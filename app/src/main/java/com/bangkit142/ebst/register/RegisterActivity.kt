@@ -26,6 +26,7 @@ class RegisterActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
 
         binding.etNik.setText(intent.getStringExtra("NIK"))
+        binding.etNik.isEnabled = false
         binding.btnSubmit.isEnabled = false
 
         binding.btnSubmit.setOnClickListener {
@@ -53,7 +54,7 @@ class RegisterActivity : AppCompatActivity() {
                 }
                 is Resource.Error -> {
                     binding.progressCircular.visibility = View.GONE
-                    Toast.makeText(this, "Check your connection!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
                 }
             }
         }

@@ -15,6 +15,10 @@ class LoginViewModel : ViewModel() {
 
     fun check(nik : String) {
         _nikExist.value = Resource.Loading()
+        if (nik.length != 16){
+            _nikExist.value = Resource.Error("NIK not valid!")
+            return
+        }
         db.collection("users").document(nik)
             .get()
             .addOnSuccessListener { document ->

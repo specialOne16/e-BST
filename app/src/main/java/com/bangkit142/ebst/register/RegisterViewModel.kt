@@ -25,6 +25,11 @@ class RegisterViewModel : ViewModel() {
     fun submit(user: Map<String, String>) {
         _submittedUser.value = Resource.Loading()
 
+        if(user["nama"] == null || user["nama"]?.isEmpty() == true){
+            _submittedUser.value = Resource.Error("Check your name!", user["NIK"]!!)
+            return
+        }
+
         db.collection("users").document(user["NIK"]!!)
             .set(user)
             .addOnSuccessListener {

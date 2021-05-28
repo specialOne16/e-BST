@@ -45,7 +45,7 @@ class LoginActivity : AppCompatActivity() {
                             this.putExtra("NIK", it.data)
                         })
                     } else {
-                        Toast.makeText(this, "Check your connection!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
                     }
                 }
             }
