@@ -9,23 +9,31 @@
         android:id="@+id/etNik"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@id/etNama"
         android:layout_centerHorizontal="true"
+        android:ems="10"
         android:hint="@string/nik"
         android:inputType="numberSigned"
-        android:layout_above="@id/etNama"
-        android:ems="10"
         tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/etNama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:hint="@string/nama"
         android:layout_centerInParent="true"
-        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
         android:ems="10"
+        android:hint="@string/nama"
+        android:inputType="textPersonName"
         tools:ignore="Autofill" />
+
+    <ImageView
+        android:id="@+id/ivRumah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/etNik"
+        android:layout_centerHorizontal="true"
+        tools:ignore="ContentDescription" />
 
     <Button
         android:id="@+id/btnSubmit"
@@ -33,7 +41,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/etNama"
         android:layout_centerHorizontal="true"
-        android:text="@string/submit"/>
+        android:text="@string/submit" />
+
+    <Button
+        android:id="@+id/btnPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSubmit"
+        android:layout_centerHorizontal="true"
+        android:text="@string/take_photo" />
 
     <ProgressBar
         android:id="@+id/progress_circular"
