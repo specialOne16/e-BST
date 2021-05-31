@@ -30,11 +30,10 @@ class RegisterActivity : AppCompatActivity() {
         binding.btnSubmit.isEnabled = false
 
         binding.btnSubmit.setOnClickListener {
-            val user: MutableMap<String, String> = HashMap()
-            user["NIK"] = binding.etNik.text.toString()
-            user["nama"] = binding.etNama.text.toString()
-
-            viewModel.submit(user)
+            viewModel.submit(
+                binding.etNik.text.toString(),
+                binding.etNama.text.toString()
+            )
         }
 
         binding.btnPhoto.setOnClickListener {
@@ -71,7 +70,7 @@ class RegisterActivity : AppCompatActivity() {
                 }
                 is Resource.Error -> {
                     binding.progressCircular.visibility = View.GONE
-                    Toast.makeText(this, "Check your connection!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
                 }
             }
         }

@@ -31,13 +31,14 @@ class MainActivity : AppCompatActivity() {
                     binding.progressCircular.visibility = View.GONE
                     binding.tvNik.text = it.data?.get("NIK")?.toString() ?: ""
                     binding.tvNama.text = it.data?.get("nama")?.toString() ?: ""
+                    binding.tvVerdictRumah.text = it.data?.get("verdict")?.toString() ?: ""
                 }
                 is Resource.Loading -> {
                     binding.progressCircular.visibility = View.VISIBLE
                 }
                 is Resource.Error -> {
                     binding.progressCircular.visibility = View.GONE
-                    Toast.makeText(this, "Check your connection!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
                     finish()
                 }
             }
